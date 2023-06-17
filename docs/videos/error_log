@@ -1,0 +1,8 @@
+[13-Apr-2023 15:21:06 Europe/London] PHP Notice:  Undefined index: file in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Notice:  Trying to access array offset on value of type null in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Notice:  Undefined index: file in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Notice:  Trying to access array offset on value of type null in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Notice:  Undefined index: file in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Notice:  Trying to access array offset on value of type null in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
+[13-Apr-2023 15:21:06 Europe/London] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/derhamii/lut.derhami.com/videos/videos.php on line 1
