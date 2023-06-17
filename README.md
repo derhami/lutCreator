@@ -1,2 +1,3 @@
-# سازنده آنلاین LUT
-<p>برای استفاده از برنامه آنلاین، <a href="https://lut.derhami.com/" target="_blank">لطفا کلیک کنید</a>.</p>
+# LutCreatorJs
+
+برای استفاده از برنامه آنلاین، لطفاً [کلیک] (https://lut.derhami.com) کنید.

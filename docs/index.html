@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه اینترنتی درهمی | سازنده آنلاین Lut</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta property="og:title" content="سازندهسازنده آنلاین Lut">
+    <meta property="og:site_name" content="سازنده آنلاین Lut">
+    <meta property="og:description" content="یک LUT از هر برنامه ویرایش عکس یا ویدیو ایجاد کنید.">
+    <meta property="og:video" content="/videos/PhotoshopToLUT.mp4">
+    <meta name="description"
+        content="یک LUT از هر برنامه ویرایش عکس یا ویدیو ایجاد کنید.">
+    <meta name="theme-color" content="#000">
+    <script src="lutCreatorJs.js"></script>
+    <script src="js.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGHX2DX0Y8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-VGHX2DX0Y8');
+    </script>
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:300,400&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2fc07cb02e.js" crossorigin="anonymous"></script>
+    <style>
+.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0 10px 10px 0 !important;
+}   
+.btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child) {
+    border-radius: 10px 0 0 10px !important;
+}
+.alert {
+    border-radius: 10px !important;
+}
+    </style>
+</head>
+<body class="container">
+    <section class="container mt-4">
+        <div class="row header">
+            <div class="col">
+                <h1 class="title">سازنده آنلاین LUT</h1>
+                <h2 class="description">برای تمامی برنامه‌های ویرایش عکس و فیلم، LUT بسازید!</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading"><i class="fas fa-exclamation-triangle"></i> یادداشت مهم</h4>
+                <p>یک جدول جستجو (LUT) فقط می‌تواند روی رنگ‌ها، کنتراست، روشنایی، گاما و غیره تأثیر بگذارد. بنابراین نمی‌توانید دانه‌بندی، کاهش نویز، رنگ‌بندی، وضوح یا هر افکت پویا دیگری اضافه کنید. اگر این نوع عناصر را روی PNG HALD اعمال کنید، خروجی LUT ممکن است خراب شود!</p>
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <div class="btn-group" role="group">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-primary" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        دانلود HALD <i class="fas fa-file-download"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#" onclick="generateHald(25)"><i class="fas fa-download"></i>
+                            HALD 25 SIZE</a>
+                        <a class="dropdown-item" href="#" onclick="generateHald(64)"><i class="fas fa-download"></i>
+                            HALD 64 SIZE</a>
+                        <a class="dropdown-item" href="#" onclick="generateHald(144)"><i class="fas fa-download"></i>
+                            HALD 144 SIZE</a>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="generateCube()">
+                    تبدیل به .CUBE <i class="fas fa-cogs"></i>
+                </button>
+            </div>
+        </div>
+        <hr>
+        <div class="row learning">
+            <div class="col-xl-4 col-lg-6 col-12">
+                <h3><i class="fas fa-info-circle"></i> جدول LUT چیست؟</h3><br>
+                <p>LUT فایلی است که حاوی دستورالعمل های ریاضی برای جایگزینی یک رنگ با رنگ دیگر است. این فرآیند پیکسل به پیکسل انجام می شود که دقت بسیار بالایی را ارائه می دهد.<br><br>
+
+                    HALD یک LUT سه بعدی است که به صورت فایل JPG یا PNG به تصویر دو بعدی تبدیل می شود. HALD الگویی است که شامل تمام مقادیر رنگ (پیکسل) برای اندازه خاصی از شبکه است. شبکه بزرگتر است، دقت رنگ بهتر خروجی LUT تولید شده است.</p>
+                <hr class="d-lg-none">
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12">
+                <h3><i class="fas fa-question-circle"></i> lut چگونه کار می‌کند؟</h3><br>
+                <p>
+                    بر روی دکمه دانلود HALD کلیک کنید و اندازه LUT را برای تولید PNG HALD انتخاب کنید، معمولا با
+                    <strong>HALD 25 سایز</strong> is
+                    کافی است. سایز 144 برای <strong>استثناهای شدید</strong>.<br><br>
+                    این PNG را در برنامه ویرایش عکس مورد علاقه خود مانند فتوشاپ، لایتروم، کمراو راو... باز کنید و یک تصحیح رنگ را در PNG HALD اعمال کنید. سپس آن را به صورت PNG بدون فشرده سازی <strong>(یا با فرمت JPG اما با کیفیت 100٪)</strong> ذخیره می‌کنید.
+                    <br><br>
+                    در نهایت روی <strong>تبدیل به CUBE</strong> کلیک کنید و PNG تغییر یافته ای را که ذخیره کرده اید انتخاب کنید.
+                    <br><br>
+                    الگوریتم تفاوت هایی را که بین هر پیکسل HALD اصلی و HALD اصلاح شده توسط شما وجود دارد تفسیر می کند.
+                    <br><br>
+                    یک LUT سه بعدی با فرمت CUBE ایجاد خواهد شد.
+                    <br>
+                </p>
+                <hr class="d-lg-none">
+            </div>
+            <div class="col-xl-4 col-lg-6 col-12">
+                <h3><i class="fas fa-question-circle"></i> آموزش‌ها</h3>
+                <div class="row">
+                    <div class="col-12"><br>
+                        <h4>از فتوشاپ تا پریمیر</h4> <p>(استفاده از گردینت فتوشاپ در پریمیر)</p>
+                        <video class="img-fluid" controls poster="videos/PhotoshopToPremiere.jpg">
+                            <source src="videos/PhotoshopToLUT.webm" type="video/webm">
+                            <source src="videos/PhotoshopToLUT.mp4" type="video/mp4">
+                        </video>
+                        <br><br>
+                    </div>
+                    <div class="col-12"><br>
+                        <h4>از لایت‌روم تا پریمیر</h4><p>(استفاده از پریست لایت‌روم در پریمیر)</p>
+                        <video class="img-fluid" controls poster="videos/LightroomToPremiere.jpg">
+                            <source src="videos/LightroomToLUT.webm" type="video/webm">
+                            <source src="videos/LightroomToLUT.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <hr class="d-lg-none">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <p><i class="fas"></i>  تهیه شده با <i class="fas fa-heart"></i>  توسط  <a
+            href="https://derhami.com" target="_blank">فروشگاه اینترنتی درهمی</a></p>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
